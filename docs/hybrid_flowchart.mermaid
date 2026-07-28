@@ -1,0 +1,27 @@
+flowchart TD
+    A([Người dùng gửi câu hỏi]) --> B{Phân loại mức độ yêu cầu}
+
+    B -->|Câu hỏi đơn giản| C[Chatbot Path]
+    B -->|Câu hỏi phức tạp| D[ReAct Agent Path]
+
+    subgraph CHATBOT[Chatbot Path]
+        C --> C1[Đọc câu hỏi]
+        C1 --> C2[Truy xuất kiến thức hoặc chính sách có sẵn]
+        C2 --> C3[Tạo câu trả lời trực tiếp]
+        C3 --> C4([Final Answer])
+    end
+
+    subgraph REACT[ReAct Agent Path]
+        D --> D1[Thought: Phân tích yêu cầu]
+        D1 --> D2{Có cần gọi Tool?}
+        D2 -->|Có| D3[Action: Chọn và gọi Tool]
+        D3 --> D4[Observation: Nhận kết quả Tool]
+        D4 --> D5{Đã đủ thông tin?}
+        D5 -->|Chưa| D1
+        D5 -->|Đủ| D6[Thought: Tổng hợp kết quả]
+        D2 -->|Không| D6
+        D6 --> D7([Final Answer])
+    end
+
+    C4 --> E([Trả kết quả cho người dùng])
+    D7 --> E

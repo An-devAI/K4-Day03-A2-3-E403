@@ -86,10 +86,119 @@ def run_react_agent(user_query: str, provider):
     Sẽ dùng REACT_SYSTEM_PROMPT (Role 3) + AVAILABLE_TOOLS (Role 2) ở buổi Mốc 3.
     """
     print(f"\n🤖 [REACT AGENT] Câu hỏi: {user_query}")
+<<<<<<< Updated upstream
     print("🚧 Chức năng ReAct Agent sẽ được lắp ráp ở MỐC 3 (chưa triển khai).")
     print(f"   - Prompt sẵn sàng: REACT_SYSTEM_PROMPT ({len(REACT_SYSTEM_PROMPT)} ký tự)")
     print(f"   - Guardrail sẵn sàng: MAX_ITERATIONS = {MAX_ITERATIONS}")
     print(f"   - Tools sẵn sàng: {', '.join(AVAILABLE_TOOLS.keys())}")
+=======
+
+    scratchpad = ""
+    seen_actions = set()
+    final_answer = None
+    step = 0
+
+    while step < MAX_ITERATIONS:
+        step += 1
+        if verbose:
+            print(f"\n--- 🔄 Vòng lặp ReAct (Step {step}/{MAX_ITERATIONS}) ---")
+
+        llm_input = f"Câu hỏi của người dùng: {user_query}\n{scratchpad}"
+        try:
+            raw_output = provider.generate(
+                llm_input,
+                system_prompt=REACT_SYSTEM_PROMPT
+            )
+        except Exception as e:
+            raw_output = f"Final Answer: [LỖI GỌI LLM]: {e}"
+
+        # Guardrail: Provider có thể trả về None hoặc dữ liệu không phải chuỗi
+        if raw_output is None:
+            final_answer = (
+                "Xin lỗi, mô hình không trả về phản hồi hợp lệ. "
+                "Hệ thống đã dừng an toàn để tránh xử lý sai dữ liệu."
+            )
+            print("🛡️ GUARDRAIL: LLM trả về None hoặc malformed response.")
+            print(f"🏁 Final Answer: {final_answer}")
+            break
+
+        if not isinstance(raw_output, str):
+            try:
+                raw_output = str(raw_output)
+            except Exception:
+                final_answer = (
+                    "Xin lỗi, hệ thống không thể đọc phản hồi từ mô hình. "
+                    "Vui lòng thử lại."
+                )
+                print("🛡️ GUARDRAIL: Phản hồi LLM không phải dạng văn bản.")
+                print(f"🏁 Final Answer: {final_answer}")
+                break
+
+        raw_output = raw_output.strip()
+
+        if not raw_output:
+            final_answer = (
+                "Xin lỗi, mô hình trả về nội dung rỗng. "
+                "Hệ thống đã dừng an toàn."
+            )
+            print("🛡️ GUARDRAIL: LLM trả về chuỗi rỗng.")
+            print(f"🏁 Final Answer: {final_answer}")
+            break
+
+        thought_match = _THOUGHT_RE.search(raw_output)
+        action_match = _ACTION_RE.search(raw_output)
+        final_match = _FINAL_RE.search(raw_output)
+
+        thought = thought_match.group(1).strip() if thought_match else None
+        if thought and verbose:
+            print(f"🧠 Thought: {thought}")
+
+        # Có Final Answer và KHÔNG có Action mới -> agent đã đủ thông tin, dừng vòng lặp
+        if final_match and not action_match:
+            final_answer = final_match.group(1).strip()
+            print(f"🏁 Final Answer: {final_answer}")
+            break
+
+        # LLM không theo định dạng ReAct (không có cả Action lẫn Final Answer) -> Guardrail an toàn
+        if not action_match:
+            final_answer = raw_output.strip() or (
+                "Xin lỗi, tôi chưa thể xử lý yêu cầu này. Bạn vui lòng cung cấp thêm thông tin."
+            )
+            print("🛡️ GUARDRAIL: LLM không trả về đúng định dạng Thought/Action/Final Answer. Dừng an toàn!")
+            print(f"🏁 Final Answer: {final_answer}")
+            break
+
+        action_name = action_match.group(1)
+        action_args = _parse_action_args(action_match.group(2))
+        action_signature = f"{action_name}[{', '.join(action_args)}]"
+        print(f"🛠️ Action: {action_signature}")
+
+        # Guardrail chống lặp vô hạn: Action y hệt đã gọi ở bước trước
+        if action_signature in seen_actions:
+            final_answer = (
+                "Xin lỗi, tôi không thể xác minh yêu cầu này sau nhiều lần thử với cùng một hành động. "
+                "Vui lòng kiểm tra lại mã đơn hàng/sản phẩm hoặc liên hệ Hotline 1900-xxxx để được hỗ trợ."
+            )
+            print("🛡️ GUARDRAIL: Phát hiện Action lặp lại y hệt bước trước đó. Dừng an toàn!")
+            print(f"🏁 Final Answer: {final_answer}")
+            break
+        seen_actions.add(action_signature)
+
+        observation = _execute_tool(action_name, action_args)
+        print(f"👁️ Observation: {observation}")
+
+        scratchpad += f"Thought: {thought or ''}\nAction: {action_signature}\nObservation: {observation}\n"
+
+    if final_answer is None:
+        final_answer = (
+            f"Xin lỗi, tôi chưa thể hoàn tất yêu cầu trong giới hạn {MAX_ITERATIONS} bước cho phép. "
+            "Vui lòng cung cấp thêm thông tin chính xác (mã đơn hàng/sản phẩm) hoặc liên hệ Hotline 1900-xxxx."
+        )
+        print(f"\n🛡️ GUARDRAIL TRIGGERED: Đã đạt giới hạn tối đa {MAX_ITERATIONS} bước. Ngắt lặp an toàn!")
+        print(f"🏁 Final Answer: {final_answer}")
+
+    return final_answer
+>>>>>>> Stashed changes
 
 
 if __name__ == "__main__":
