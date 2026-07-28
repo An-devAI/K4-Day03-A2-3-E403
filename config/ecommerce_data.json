@@ -196,7 +196,7 @@
       ]
     },
     {
-      "order_id": "ORD1000",
+      "order_id": "DH10234",
       "customer_id": "CUS020",
       "customer_name": "Khach hang 1000",
       "status": "returned",
@@ -219,7 +219,7 @@
       ]
     },
     {
-      "order_id": "ORD1001",
+      "order_id": "DH999999",
       "customer_id": "CUS021",
       "customer_name": "Khach hang 1001",
       "status": "processing",
