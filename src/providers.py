@@ -4,6 +4,7 @@ Hỗ trợ chuyển đổi linh hoạt giữa các nhà cung cấp AI chỉ bằ
 """
 
 import os
+import re
 import sys
 import json
 import requests
@@ -132,11 +133,36 @@ class OpenRouterProvider(BaseLLMProvider):
 
 
 class MockProvider(BaseLLMProvider):
-    """Offline Mock Provider (Cho bài test không cần kết nối API)"""
+    """
+    Offline Mock Provider (Cho bài test không cần kết nối API).
+    Mô phỏng đúng bối cảnh Đề tài 5: Trợ Lý Tra Cứu Đơn Hàng & Xử Lý Đổi Trả.
+    """
     def generate(self, prompt: str, system_prompt: str = "") -> str:
         text = prompt.lower()
-        if "thời tiết" in text and "hà nội" in text:
-            return "Thought: Cần tra cứu thời tiết Hà Nội.\nAction: get_weather['Hà Nội']"
+
+        # Ưu tiên 1: Câu hỏi cần DỮ LIỆU HỆ THỐNG (có mã đơn cụ thể hoặc yêu cầu hành động)
+        # -> Baseline bó tay. Đây chính là hạn chế cần ghi nhận ở Mốc 2.
+        has_order_id = re.search(r"\b(ord|dh)[-_ ]?\d+", text) is not None
+        needs_action = any(k in text for k in [
+            "đơn hàng của tôi", "hủy đơn", "tạo yêu cầu", "hoàn tiền", "đang ở đâu"
+        ])
+        if has_order_id or needs_action:
+            return (
+                "[Mock Baseline] Rất tiếc, mình là chatbot baseline không có quyền truy cập "
+                "hệ thống đơn hàng nên không thể kiểm tra trạng thái, tạo yêu cầu đổi trả "
+                "hay hủy đơn giúp bạn. Bạn vui lòng cung cấp mã đơn hàng và liên hệ CSKH, "
+                "hoặc chờ ReAct Agent (Mốc 3) có tool tra cứu thật."
+            )
+
+        # Ưu tiên 2: Câu hỏi CHÍNH SÁCH CHUNG -> Chatbot thuần LLM vẫn trả lời được
+        if any(k in text for k in ["chính sách", "đổi trả", "bảo hành", "phí ship", "vận chuyển"]):
+            return (
+                "[Mock Baseline] Theo hiểu biết chung, cửa hàng thường hỗ trợ đổi/trả trong "
+                "khoảng 7 ngày kể từ khi nhận hàng nếu sản phẩm còn nguyên tem mác, và thường "
+                "không áp dụng cho hàng sale sâu hoặc sản phẩm đã qua sử dụng. "
+                "Tuy nhiên mình chưa thể xác nhận chính sách chính xác vì không có công cụ tra cứu nội bộ."
+            )
+
         return "🤖 [Mock Provider]: Phản hồi giả lập offline cho bài test."
 
 
