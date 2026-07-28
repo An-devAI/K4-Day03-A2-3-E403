@@ -1,0 +1,2989 @@
+{
+  "metadata": {
+    "name": "E-commerce order and return mock dataset",
+    "generated_at": "2026-07-28",
+    "order_count": 123,
+    "product_count": 12,
+    "return_window_days": 7,
+    "currency": "VND"
+  },
+  "products": [
+    {
+      "product_id": "SP001",
+      "name": "Ao thun nam Basic",
+      "category": "fashion",
+      "variant": "Mau den, Size L",
+      "price": 250000,
+      "returnable": true,
+      "warranty_days": 0,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP002",
+      "name": "Quan Jean form rong",
+      "category": "fashion",
+      "variant": "Mau xanh, Size 32",
+      "price": 400000,
+      "returnable": false,
+      "warranty_days": 0,
+      "sale_percent": 80
+    },
+    {
+      "product_id": "SP003",
+      "name": "Giay the thao nam",
+      "category": "fashion",
+      "variant": "Size 42",
+      "price": 1200000,
+      "returnable": true,
+      "warranty_days": 30,
+      "sale_percent": 10
+    },
+    {
+      "product_id": "SP004",
+      "name": "Tai nghe Bluetooth AirBeat",
+      "category": "electronics",
+      "variant": "Trang",
+      "price": 890000,
+      "returnable": true,
+      "warranty_days": 365,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP005",
+      "name": "Ban phim co K87",
+      "category": "electronics",
+      "variant": "Blue switch",
+      "price": 1350000,
+      "returnable": true,
+      "warranty_days": 365,
+      "sale_percent": 20
+    },
+    {
+      "product_id": "SP006",
+      "name": "Chuot gaming G-Pro",
+      "category": "electronics",
+      "variant": "Den",
+      "price": 620000,
+      "returnable": true,
+      "warranty_days": 365,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP007",
+      "name": "Binh giu nhiet 750ml",
+      "category": "home",
+      "variant": "Xanh reu",
+      "price": 220000,
+      "returnable": true,
+      "warranty_days": 0,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP008",
+      "name": "Set khan cotton",
+      "category": "home",
+      "variant": "3 chiec",
+      "price": 180000,
+      "returnable": false,
+      "warranty_days": 0,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP009",
+      "name": "Kem chong nang SPF50",
+      "category": "beauty",
+      "variant": "50ml",
+      "price": 320000,
+      "returnable": false,
+      "warranty_days": 0,
+      "sale_percent": 15
+    },
+    {
+      "product_id": "SP010",
+      "name": "Sua rua mat tra xanh",
+      "category": "beauty",
+      "variant": "120ml",
+      "price": 210000,
+      "returnable": false,
+      "warranty_days": 0,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP011",
+      "name": "Ba lo laptop 15 inch",
+      "category": "accessory",
+      "variant": "Xam",
+      "price": 550000,
+      "returnable": true,
+      "warranty_days": 90,
+      "sale_percent": 0
+    },
+    {
+      "product_id": "SP012",
+      "name": "Sac nhanh USB-C 65W",
+      "category": "electronics",
+      "variant": "2 cong",
+      "price": 480000,
+      "returnable": true,
+      "warranty_days": 365,
+      "sale_percent": 5
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ORD123",
+      "customer_id": "CUS001",
+      "customer_name": "Nguyen Minh Anh",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong vao luc 10:30 sang nay",
+      "created_date": "2026-07-20",
+      "delivered_date": "2026-07-28",
+      "carrier": "GHN",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD456",
+      "customer_id": "CUS002",
+      "customer_name": "Tran Quoc Bao",
+      "status": "shipping",
+      "status_text": "Dang duoc giao boi J&T Express, du kien nhan trong hom nay",
+      "created_date": "2026-07-25",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP007",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD789",
+      "customer_id": "CUS003",
+      "customer_name": "Le Gia Han",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-28",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1000",
+      "customer_id": "CUS020",
+      "customer_name": "Khach hang 1000",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-07-05",
+      "delivered_date": "2026-07-07",
+      "carrier": "GHN",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1001",
+      "customer_id": "CUS021",
+      "customer_name": "Khach hang 1001",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-06",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1002",
+      "customer_id": "CUS022",
+      "customer_name": "Khach hang 1002",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-07-07",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1003",
+      "customer_id": "CUS023",
+      "customer_name": "Khach hang 1003",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-07-08",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1004",
+      "customer_id": "CUS024",
+      "customer_name": "Khach hang 1004",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-09",
+      "delivered_date": "2026-07-11",
+      "carrier": "Ninja Van",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1005",
+      "customer_id": "CUS025",
+      "customer_name": "Khach hang 1005",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-10",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1006",
+      "customer_id": "CUS026",
+      "customer_name": "Khach hang 1006",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-07-11",
+      "delivered_date": "2026-07-15",
+      "carrier": "GHTK",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1007",
+      "customer_id": "CUS027",
+      "customer_name": "Khach hang 1007",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-07-12",
+      "delivered_date": "2026-07-17",
+      "carrier": "J&T Express",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1008",
+      "customer_id": "CUS028",
+      "customer_name": "Khach hang 1008",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-13",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1009",
+      "customer_id": "CUS029",
+      "customer_name": "Khach hang 1009",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-07-14",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1010",
+      "customer_id": "CUS030",
+      "customer_name": "Khach hang 1010",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-07-15",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1011",
+      "customer_id": "CUS031",
+      "customer_name": "Khach hang 1011",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-16",
+      "delivered_date": "2026-07-21",
+      "carrier": "GHTK",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1012",
+      "customer_id": "CUS032",
+      "customer_name": "Khach hang 1012",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-17",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1013",
+      "customer_id": "CUS033",
+      "customer_name": "Khach hang 1013",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-07-18",
+      "delivered_date": "2026-07-21",
+      "carrier": "Viettel Post",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1014",
+      "customer_id": "CUS034",
+      "customer_name": "Khach hang 1014",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-07-19",
+      "delivered_date": "2026-07-23",
+      "carrier": "Ninja Van",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1015",
+      "customer_id": "CUS035",
+      "customer_name": "Khach hang 1015",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-20",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1016",
+      "customer_id": "CUS036",
+      "customer_name": "Khach hang 1016",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-07-21",
+      "delivered_date": null,
+      "carrier": "GHTK",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1017",
+      "customer_id": "CUS037",
+      "customer_name": "Khach hang 1017",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-07-22",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1018",
+      "customer_id": "CUS038",
+      "customer_name": "Khach hang 1018",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-23",
+      "delivered_date": "2026-07-27",
+      "carrier": "Viettel Post",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1019",
+      "customer_id": "CUS039",
+      "customer_name": "Khach hang 1019",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-24",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1020",
+      "customer_id": "CUS040",
+      "customer_name": "Khach hang 1020",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-01",
+      "delivered_date": "2026-05-03",
+      "carrier": "GHN",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1021",
+      "customer_id": "CUS041",
+      "customer_name": "Khach hang 1021",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-02",
+      "delivered_date": "2026-05-05",
+      "carrier": "GHTK",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1022",
+      "customer_id": "CUS042",
+      "customer_name": "Khach hang 1022",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-03",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1023",
+      "customer_id": "CUS043",
+      "customer_name": "Khach hang 1023",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-05-04",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1024",
+      "customer_id": "CUS044",
+      "customer_name": "Khach hang 1024",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-05-05",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1025",
+      "customer_id": "CUS045",
+      "customer_name": "Khach hang 1025",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-05-06",
+      "delivered_date": "2026-05-09",
+      "carrier": "GHN",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1026",
+      "customer_id": "CUS046",
+      "customer_name": "Khach hang 1026",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-05-07",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1027",
+      "customer_id": "CUS047",
+      "customer_name": "Khach hang 1027",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-08",
+      "delivered_date": "2026-05-13",
+      "carrier": "J&T Express",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1028",
+      "customer_id": "CUS048",
+      "customer_name": "Khach hang 1028",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-09",
+      "delivered_date": "2026-05-11",
+      "carrier": "Viettel Post",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1029",
+      "customer_id": "CUS049",
+      "customer_name": "Khach hang 1029",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-10",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1030",
+      "customer_id": "CUS050",
+      "customer_name": "Khach hang 1030",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-05-11",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1031",
+      "customer_id": "CUS051",
+      "customer_name": "Khach hang 1031",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-05-12",
+      "delivered_date": null,
+      "carrier": "GHTK",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1032",
+      "customer_id": "CUS052",
+      "customer_name": "Khach hang 1032",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-05-13",
+      "delivered_date": "2026-05-15",
+      "carrier": "J&T Express",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1033",
+      "customer_id": "CUS053",
+      "customer_name": "Khach hang 1033",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-05-14",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1034",
+      "customer_id": "CUS054",
+      "customer_name": "Khach hang 1034",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-15",
+      "delivered_date": "2026-05-19",
+      "carrier": "Ninja Van",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1035",
+      "customer_id": "CUS010",
+      "customer_name": "Khach hang 1035",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-16",
+      "delivered_date": "2026-05-21",
+      "carrier": "GHN",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1036",
+      "customer_id": "CUS011",
+      "customer_name": "Khach hang 1036",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-17",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1037",
+      "customer_id": "CUS012",
+      "customer_name": "Khach hang 1037",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-05-18",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1038",
+      "customer_id": "CUS013",
+      "customer_name": "Khach hang 1038",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-05-19",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1039",
+      "customer_id": "CUS014",
+      "customer_name": "Khach hang 1039",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-05-20",
+      "delivered_date": "2026-05-25",
+      "carrier": "Ninja Van",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1040",
+      "customer_id": "CUS015",
+      "customer_name": "Khach hang 1040",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-05-21",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1041",
+      "customer_id": "CUS016",
+      "customer_name": "Khach hang 1041",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-22",
+      "delivered_date": "2026-05-25",
+      "carrier": "GHTK",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1042",
+      "customer_id": "CUS017",
+      "customer_name": "Khach hang 1042",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-23",
+      "delivered_date": "2026-05-27",
+      "carrier": "J&T Express",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1043",
+      "customer_id": "CUS018",
+      "customer_name": "Khach hang 1043",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-24",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1044",
+      "customer_id": "CUS019",
+      "customer_name": "Khach hang 1044",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-05-25",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1045",
+      "customer_id": "CUS020",
+      "customer_name": "Khach hang 1045",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-05-26",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1046",
+      "customer_id": "CUS021",
+      "customer_name": "Khach hang 1046",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-05-27",
+      "delivered_date": "2026-05-31",
+      "carrier": "GHTK",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1047",
+      "customer_id": "CUS022",
+      "customer_name": "Khach hang 1047",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-05-28",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1048",
+      "customer_id": "CUS023",
+      "customer_name": "Khach hang 1048",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-29",
+      "delivered_date": "2026-05-31",
+      "carrier": "Viettel Post",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1049",
+      "customer_id": "CUS024",
+      "customer_name": "Khach hang 1049",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-30",
+      "delivered_date": "2026-06-02",
+      "carrier": "Ninja Van",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1050",
+      "customer_id": "CUS025",
+      "customer_name": "Khach hang 1050",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-31",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1051",
+      "customer_id": "CUS026",
+      "customer_name": "Khach hang 1051",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-06-01",
+      "delivered_date": null,
+      "carrier": "GHTK",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1052",
+      "customer_id": "CUS027",
+      "customer_name": "Khach hang 1052",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-06-02",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1053",
+      "customer_id": "CUS028",
+      "customer_name": "Khach hang 1053",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-06-03",
+      "delivered_date": "2026-06-06",
+      "carrier": "Viettel Post",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1054",
+      "customer_id": "CUS029",
+      "customer_name": "Khach hang 1054",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-06-04",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1055",
+      "customer_id": "CUS030",
+      "customer_name": "Khach hang 1055",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-06-05",
+      "delivered_date": "2026-06-10",
+      "carrier": "GHN",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1056",
+      "customer_id": "CUS031",
+      "customer_name": "Khach hang 1056",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-06-06",
+      "delivered_date": "2026-06-08",
+      "carrier": "GHTK",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1057",
+      "customer_id": "CUS032",
+      "customer_name": "Khach hang 1057",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-06-07",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1058",
+      "customer_id": "CUS033",
+      "customer_name": "Khach hang 1058",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-06-08",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1059",
+      "customer_id": "CUS034",
+      "customer_name": "Khach hang 1059",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-06-09",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1060",
+      "customer_id": "CUS035",
+      "customer_name": "Khach hang 1060",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-06-10",
+      "delivered_date": "2026-06-12",
+      "carrier": "GHN",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1061",
+      "customer_id": "CUS036",
+      "customer_name": "Khach hang 1061",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-06-11",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1062",
+      "customer_id": "CUS037",
+      "customer_name": "Khach hang 1062",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-06-12",
+      "delivered_date": "2026-06-16",
+      "carrier": "J&T Express",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1063",
+      "customer_id": "CUS038",
+      "customer_name": "Khach hang 1063",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-06-13",
+      "delivered_date": "2026-06-18",
+      "carrier": "Viettel Post",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1064",
+      "customer_id": "CUS039",
+      "customer_name": "Khach hang 1064",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-06-14",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1065",
+      "customer_id": "CUS040",
+      "customer_name": "Khach hang 1065",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-06-15",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1066",
+      "customer_id": "CUS041",
+      "customer_name": "Khach hang 1066",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-06-16",
+      "delivered_date": null,
+      "carrier": "GHTK",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1067",
+      "customer_id": "CUS042",
+      "customer_name": "Khach hang 1067",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-06-17",
+      "delivered_date": "2026-06-22",
+      "carrier": "J&T Express",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1068",
+      "customer_id": "CUS043",
+      "customer_name": "Khach hang 1068",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-06-18",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1069",
+      "customer_id": "CUS044",
+      "customer_name": "Khach hang 1069",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-06-19",
+      "delivered_date": "2026-06-22",
+      "carrier": "Ninja Van",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1070",
+      "customer_id": "CUS045",
+      "customer_name": "Khach hang 1070",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-06-20",
+      "delivered_date": "2026-06-24",
+      "carrier": "GHN",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1071",
+      "customer_id": "CUS046",
+      "customer_name": "Khach hang 1071",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-06-21",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1072",
+      "customer_id": "CUS047",
+      "customer_name": "Khach hang 1072",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-06-22",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1073",
+      "customer_id": "CUS048",
+      "customer_name": "Khach hang 1073",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-06-23",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1074",
+      "customer_id": "CUS049",
+      "customer_name": "Khach hang 1074",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-06-24",
+      "delivered_date": "2026-06-28",
+      "carrier": "Ninja Van",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1075",
+      "customer_id": "CUS050",
+      "customer_name": "Khach hang 1075",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-06-25",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1076",
+      "customer_id": "CUS051",
+      "customer_name": "Khach hang 1076",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-06-26",
+      "delivered_date": "2026-06-28",
+      "carrier": "GHTK",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1077",
+      "customer_id": "CUS052",
+      "customer_name": "Khach hang 1077",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-06-27",
+      "delivered_date": "2026-06-30",
+      "carrier": "J&T Express",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1078",
+      "customer_id": "CUS053",
+      "customer_name": "Khach hang 1078",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-06-28",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1079",
+      "customer_id": "CUS054",
+      "customer_name": "Khach hang 1079",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-06-29",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1080",
+      "customer_id": "CUS010",
+      "customer_name": "Khach hang 1080",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-06-30",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1081",
+      "customer_id": "CUS011",
+      "customer_name": "Khach hang 1081",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-01",
+      "delivered_date": "2026-07-04",
+      "carrier": "GHTK",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1082",
+      "customer_id": "CUS012",
+      "customer_name": "Khach hang 1082",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-02",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1083",
+      "customer_id": "CUS013",
+      "customer_name": "Khach hang 1083",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-07-03",
+      "delivered_date": "2026-07-08",
+      "carrier": "Viettel Post",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1084",
+      "customer_id": "CUS014",
+      "customer_name": "Khach hang 1084",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-07-04",
+      "delivered_date": "2026-07-06",
+      "carrier": "Ninja Van",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1085",
+      "customer_id": "CUS015",
+      "customer_name": "Khach hang 1085",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-05",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1086",
+      "customer_id": "CUS016",
+      "customer_name": "Khach hang 1086",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-07-06",
+      "delivered_date": null,
+      "carrier": "GHTK",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1087",
+      "customer_id": "CUS017",
+      "customer_name": "Khach hang 1087",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-07-07",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1088",
+      "customer_id": "CUS018",
+      "customer_name": "Khach hang 1088",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-08",
+      "delivered_date": "2026-07-10",
+      "carrier": "Viettel Post",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1089",
+      "customer_id": "CUS019",
+      "customer_name": "Khach hang 1089",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-09",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1090",
+      "customer_id": "CUS020",
+      "customer_name": "Khach hang 1090",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-07-10",
+      "delivered_date": "2026-07-14",
+      "carrier": "GHN",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1091",
+      "customer_id": "CUS021",
+      "customer_name": "Khach hang 1091",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-07-11",
+      "delivered_date": "2026-07-16",
+      "carrier": "GHTK",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1092",
+      "customer_id": "CUS022",
+      "customer_name": "Khach hang 1092",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-12",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1093",
+      "customer_id": "CUS023",
+      "customer_name": "Khach hang 1093",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-07-13",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1094",
+      "customer_id": "CUS024",
+      "customer_name": "Khach hang 1094",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-07-14",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1095",
+      "customer_id": "CUS025",
+      "customer_name": "Khach hang 1095",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-15",
+      "delivered_date": "2026-07-20",
+      "carrier": "GHN",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1096",
+      "customer_id": "CUS026",
+      "customer_name": "Khach hang 1096",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-16",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1097",
+      "customer_id": "CUS027",
+      "customer_name": "Khach hang 1097",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-07-17",
+      "delivered_date": "2026-07-20",
+      "carrier": "J&T Express",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1098",
+      "customer_id": "CUS028",
+      "customer_name": "Khach hang 1098",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-07-18",
+      "delivered_date": "2026-07-22",
+      "carrier": "Viettel Post",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1099",
+      "customer_id": "CUS029",
+      "customer_name": "Khach hang 1099",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-07-19",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1100",
+      "customer_id": "CUS030",
+      "customer_name": "Khach hang 1100",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-07-20",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1101",
+      "customer_id": "CUS031",
+      "customer_name": "Khach hang 1101",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-07-21",
+      "delivered_date": null,
+      "carrier": "GHTK",
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1102",
+      "customer_id": "CUS032",
+      "customer_name": "Khach hang 1102",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-07-22",
+      "delivered_date": "2026-07-26",
+      "carrier": "J&T Express",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1103",
+      "customer_id": "CUS033",
+      "customer_name": "Khach hang 1103",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-07-23",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1104",
+      "customer_id": "CUS034",
+      "customer_name": "Khach hang 1104",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-07-24",
+      "delivered_date": "2026-07-26",
+      "carrier": "Ninja Van",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1105",
+      "customer_id": "CUS035",
+      "customer_name": "Khach hang 1105",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-01",
+      "delivered_date": "2026-05-04",
+      "carrier": "GHN",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1106",
+      "customer_id": "CUS036",
+      "customer_name": "Khach hang 1106",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-02",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1107",
+      "customer_id": "CUS037",
+      "customer_name": "Khach hang 1107",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-05-03",
+      "delivered_date": null,
+      "carrier": "J&T Express",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1108",
+      "customer_id": "CUS038",
+      "customer_name": "Khach hang 1108",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-05-04",
+      "delivered_date": null,
+      "carrier": "Viettel Post",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1109",
+      "customer_id": "CUS039",
+      "customer_name": "Khach hang 1109",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-05-05",
+      "delivered_date": "2026-05-08",
+      "carrier": "Ninja Van",
+      "payment_method": "COD",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1110",
+      "customer_id": "CUS040",
+      "customer_name": "Khach hang 1110",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-05-06",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP007",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1111",
+      "customer_id": "CUS041",
+      "customer_name": "Khach hang 1111",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-07",
+      "delivered_date": "2026-05-12",
+      "carrier": "GHTK",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP008",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1112",
+      "customer_id": "CUS042",
+      "customer_name": "Khach hang 1112",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-08",
+      "delivered_date": "2026-05-10",
+      "carrier": "J&T Express",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1113",
+      "customer_id": "CUS043",
+      "customer_name": "Khach hang 1113",
+      "status": "processing",
+      "status_text": "Dang xu ly tai kho, chua ban giao cho don vi van chuyen",
+      "created_date": "2026-05-09",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP010",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1114",
+      "customer_id": "CUS044",
+      "customer_name": "Khach hang 1114",
+      "status": "packed",
+      "status_text": "Da dong goi, dang cho don vi van chuyen den lay",
+      "created_date": "2026-05-10",
+      "delivered_date": null,
+      "carrier": "Ninja Van",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP011",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1115",
+      "customer_id": "CUS045",
+      "customer_name": "Khach hang 1115",
+      "status": "shipping",
+      "status_text": "Dang tren duong giao den khach hang",
+      "created_date": "2026-05-11",
+      "delivered_date": null,
+      "carrier": "GHN",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP012",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1116",
+      "customer_id": "CUS046",
+      "customer_name": "Khach hang 1116",
+      "status": "delivered",
+      "status_text": "Da giao thanh cong",
+      "created_date": "2026-05-12",
+      "delivered_date": "2026-05-14",
+      "carrier": "GHTK",
+      "payment_method": "Momo",
+      "payment_status": "paid",
+      "shipping_fee": 30000,
+      "items": [
+        {
+          "product_id": "SP001",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1117",
+      "customer_id": "CUS047",
+      "customer_name": "Khach hang 1117",
+      "status": "cancelled",
+      "status_text": "Da huy theo yeu cau khach hang",
+      "created_date": "2026-05-13",
+      "delivered_date": null,
+      "carrier": null,
+      "payment_method": "COD",
+      "payment_status": "unpaid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP002",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP005",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1118",
+      "customer_id": "CUS048",
+      "customer_name": "Khach hang 1118",
+      "status": "return_requested",
+      "status_text": "Da tao yeu cau doi/tra, dang cho lay hang hoan",
+      "created_date": "2026-05-14",
+      "delivered_date": "2026-05-18",
+      "carrier": "Viettel Post",
+      "payment_method": "VNPay",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP003",
+          "quantity": 1
+        },
+        {
+          "product_id": "SP006",
+          "quantity": 2
+        },
+        {
+          "product_id": "SP009",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "order_id": "ORD1119",
+      "customer_id": "CUS049",
+      "customer_name": "Khach hang 1119",
+      "status": "returned",
+      "status_text": "Da hoan tat tra hang va hoan tien",
+      "created_date": "2026-05-15",
+      "delivered_date": "2026-05-20",
+      "carrier": "Ninja Van",
+      "payment_method": "The tin dung",
+      "payment_status": "paid",
+      "shipping_fee": 0,
+      "items": [
+        {
+          "product_id": "SP004",
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "policies": {
+    "doi_tra": "Cua hang ho tro doi/tra trong 7 ngay ke tu khi nhan hang neu san pham con nguyen tem mac, chua qua su dung. Hang sale tren 50%, my pham da mo niem phong va do ca nhan khong ho tro doi/tra.",
+    "phi_ship": "Mien phi giao hang toan quoc cho don tu 500,000 VND. Don duoi 500,000 VND ap dung phi ship dong gia 30,000 VND.",
+    "bao_hanh": "San pham dien tu ap dung bao hanh theo thoi han ghi trong du lieu san pham. Loi do roi vo, vao nuoc hoac su dung sai huong dan khong duoc bao hanh mien phi.",
+    "huy_don": "Chi co the huy don khi don con o trang thai dang xu ly hoac da dong goi nhung chua ban giao cho don vi van chuyen.",
+    "hoan_tien": "Hoan tien ve phuong thuc thanh toan ban dau trong 3-5 ngay lam viec sau khi kho xac nhan da nhan hang hoan."
+  },
+  "return_requests": [
+    {
+      "return_id": "RET-1001",
+      "order_id": "ORD1010",
+      "product_id": "SP007",
+      "reason": "San pham bi mop",
+      "status": "approved"
+    },
+    {
+      "return_id": "RET-1002",
+      "order_id": "ORD1024",
+      "product_id": "SP004",
+      "reason": "Khong ket noi Bluetooth",
+      "status": "in_review"
+    },
+    {
+      "return_id": "RET-1003",
+      "order_id": "ORD1038",
+      "product_id": "SP011",
+      "reason": "Giao sai mau",
+      "status": "pickup_scheduled"
+    }
+  ]
+}
