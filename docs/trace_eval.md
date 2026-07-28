@@ -7,17 +7,17 @@
 
 | Tiêu chí | Điểm (1-5) | Lý do đánh giá |
 | :--- | :---: | :--- |
-| 🧠 **Multi-step Reasoning** | `4/5` | Cần suy luận từ tra cứu thời tiết đến chọn trang phục. |
-| 🛠️ **Tool Interaction** | `5/5` | Cần tra cứu dữ liệu thời gian thực qua API thời tiết/chuyến bay. |
-| 🔀 **Dynamic Decision** | `4/5` | Kết quả bước trước quyết định hành động bước sau. |
-| ⏳ **Long Horizon** | `3/5` | Quy trình gồm 2-3 bước xử lý ngắn. |
-| **TỔNG ĐIỂM FIT** | **16/20** | **KẾT LUẬN: BÀI TOÁN RẤT NÊN DÙNG REACT AGENT!** |
+| 🧠 **Multi-step Reasoning** | `/5` | Agent cần xác định đơn hàng, kiểm tra trạng thái, đối chiếu chính sách đổi trả rồi mới quyết định hướng xử lý. |
+| 🛠️ **Tool Interaction** | `/5` | Cần truy vấn nhiều hệ thống như Order Database, Logistics API, Return Policy và tạo yêu cầu đổi trả. |
+| 🔀 **Dynamic Decision** | `/5` | Quy trình xử lý thay đổi theo trạng thái đơn hàng (đang giao, đã giao, quá hạn, không đủ điều kiện...). |
+| ⏳ **Long Horizon** | `/5` | Bao gồm nhiều bước liên tiếp: tra cứu → xác minh → đánh giá điều kiện → tạo yêu cầu → thông báo kết quả. |
+| **TỔNG ĐIỂM FIT** | **/20** | **KẾT LUẬN: ** |
 
 ---
 
 ## 🔍 2. SO SÁNH PHẢN HỒI (TEST CASE #3)
 
-**Câu hỏi**: *"Thời tiết ở Hà Nội hôm nay thế nào và tôi nên mặc gì đi chơi?"*
+**Câu hỏi**: *"Đơn hàng #DH10234 của tôi đang ở đâu? Nếu áo bị rộng thì tôi có thể đổi size không?"*
 
 ### 🤖 Chatbot Baseline:
 * **Phản hồi**: *"Tôi không có truy cập Internet thời gian thực nên không biết thời tiết hôm nay ở Hà Nội."*
