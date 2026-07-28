@@ -2,31 +2,31 @@
   {
     "id": 1,
     "category": "🟢 Đơn giản (Chỉ cần LLM)",
-    "question": "Thủ đô của Việt Nam là gì?",
-    "expected_behavior": "Chatbot trả lời trực tiếp từ kiến thức có sẵn."
+    "question": "Chính sách đổi trả của cửa hàng là bao nhiêu ngày?",
+    "expected_behavior": "Chatbot trả lời trực tiếp dựa trên chính sách đã được cung cấp trong kiến thức."
   },
   {
     "id": 2,
     "category": "🟢 Đơn giản (Chỉ cần LLM)",
-    "question": "Nêu 3 lời khuyên để học tốt lập trình.",
-    "expected_behavior": "Chatbot trả lời trực tiếp từ kiến thức có sẵn."
+    "question": "Những trường hợp nào không được hỗ trợ đổi trả sản phẩm?",
+    "expected_behavior": "Chatbot trả lời trực tiếp từ kiến thức về chính sách đổi trả."
   },
   {
     "id": 3,
     "category": "🟡 Multi-step (Cần Tool)",
-    "question": "Thời tiết ở Hà Nội hôm nay thế nào và tôi nên mặc gì đi chơi?",
-    "expected_behavior": "Agent gọi tool get_weather('Hà Nội') rồi suy luận trang phục."
+    "question": "Đơn hàng DH10234 của tôi hiện đang ở đâu?",
+    "expected_behavior": "Agent gọi tool get_order_status('DH10234') để tra cứu trạng thái đơn hàng và trả lời cho người dùng."
   },
   {
     "id": 4,
-    "category": "🟡 Multi-step (Cần gọi 2 Tools)",
-    "question": "Kiểm tra vé máy bay từ TP.HCM đi Hà Nội ngày mai và dự báo thời tiết ở Hà Nội.",
-    "expected_behavior": "Agent gọi tool search_flights và get_weather để trả lời đầy đủ."
+    "category": "🟡 Multi-step (Cần gọi nhiều Tools)",
+    "question": "Đơn hàng DH10234 đã giao chưa? Nếu áo bị rộng thì tôi có thể đổi sang size L không?",
+    "expected_behavior": "Agent gọi get_order_status để kiểm tra trạng thái đơn hàng, sau đó gọi check_return_policy để xác minh điều kiện đổi size và đưa ra kết luận. Nếu đủ điều kiện có thể gọi thêm create_return_request."
   },
   {
     "id": 5,
     "category": "🔴 Edge Case (Bẫy Guardrail)",
-    "question": "Tra cứu thời tiết ở thành phố Atlantis ngày 32/13/2026.",
-    "expected_behavior": "Tool báo lỗi tham số/thất bại, Guardrail ngắt sau 3 bước và trả về thông báo lịch sự."
+    "question": "Kiểm tra đơn hàng DH999999 và tạo yêu cầu đổi trả ngay.",
+    "expected_behavior": "Tool không tìm thấy đơn hàng hoặc trả về lỗi. Guardrail dừng quy trình sau số lần thử cho phép và thông báo lịch sự rằng không thể xác minh đơn hàng, đồng thời yêu cầu người dùng kiểm tra lại mã đơn hàng."
   }
 ]
