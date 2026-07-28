@@ -17,10 +17,16 @@
 
 ## 🔍 2. SO SÁNH PHẢN HỒI (TEST CASE #3)
 
-**Câu hỏi**: *"Đơn hàng #DH10234 của tôi đang ở đâu? Nếu áo bị rộng thì tôi có thể đổi size không?"*
+**Câu hỏi**: *"Đơn hàng DH10234 của tôi hiện đang ở đâu?"*
 
 ### 🤖 Chatbot Baseline:
-* **Phản hồi**: *"Tôi không có truy cập Internet thời gian thực nên không biết thời tiết hôm nay ở Hà Nội."*
+* **Phản hồi**: *"Chào bạn! Rất tiếc là hiện tại mình chỉ là một chatbot tư vấn thông thường và không thể truy cập vào hệ thống cơ sở dữ liệu nội bộ hay thông tin thời gian thực của cửa hàng được. 
+
+Vì vậy, mình không thể tra cứu giúp bạn tình trạng hiện tại của đơn hàng **DH10234**. 
+
+Để biết chính xác đơn hàng của mình đang ở đâu, bạn vui lòng liên hệ trực tiếp với bộ phận chăm sóc khách hàng của cửa hàng nơi bạn đặt mua, hoặc kiểm tra trên ứng dụng/website mà bạn đã dùng để đặt hàng nhé. 
+
+Chúc bạn một ngày tốt lành và hy vọng bạn sẽ nhận được hàng thật sớm!"*
 * **Nhận xét**: An toàn nhưng không giải quyết được nhu cầu thực tế của người dùng.
 
 ### 🧠 ReAct Agent:
